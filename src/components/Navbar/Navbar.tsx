@@ -13,7 +13,7 @@ const Navbar = () => {
         <li>FAQ</li>
         <li>Travel Guides</li>
       </ul>
-      <button>Book Now</button>
+      <button className="book-now-btn">Book Now</button>
     </nav>
   )
 }

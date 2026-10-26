@@ -3,3 +3,19 @@
 *{
     box-sizing: border-box;
 }
+
+body{
+    font-family: "Clarity City", sans-serif;
+    background: #e39d9d;
+    background: linear-gradient(354deg, rgba(227, 157, 157, 1) 0%, rgb(255, 152, 147) 50%, rgb(255, 129, 120) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+button{
+    font-family: "Sora", sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
