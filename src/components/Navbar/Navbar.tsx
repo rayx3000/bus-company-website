@@ -6,28 +6,28 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link className="link" to="/">Home</Link>
         </li>
         <li>
-          <Link to="/online-booking">Booking</Link>
+          <Link className="link" to="/online-booking">Booking</Link>
         </li>
         <li>
-          <Link to="/schedules">Schedules</Link>
+          <Link className="link" to="/schedules">Schedules</Link>
         </li>
         <li>
-          <Link to="/terminals">Terminals</Link>
+          <Link className="link" to="/terminals">Terminals</Link>
         </li>
         <li>
-          <Link to="/rates">Rates</Link>
+          <Link className="link" to="/rates">Rates</Link>
         </li>
         <li>
-          <Link to="/routes">Routes</Link>
+          <Link className="link" to="/routes">Routes</Link>
         </li>
         <li>
-          <Link to="/faq">FAQ</Link>
+          <Link className="link" to="/faq">FAQ</Link>
         </li>
         <li>
-          <Link to="/travel-guides">Travel Guides</Link>
+          <Link className="link" to="/travel-guides">Travel Guides</Link>
         </li>
       </ul>
       <button className="book-now-btn">Book Now</button>

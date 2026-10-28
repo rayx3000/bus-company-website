@@ -12,6 +12,22 @@ nav{
         li{
             cursor: pointer;
         }
+
+        .link{
+            text-decoration: none;
+            color: #1c1c1c;
+            font-weight: 600;
+
+            &:hover{
+                color: #333;
+                transform: scale(1.02);
+            }
+
+            &:active{
+                color: #505050;
+                transform: scale(0.975);
+            }
+        }
     }
 
     .book-now-btn{
