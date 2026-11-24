@@ -1,10 +1,9 @@
 import { Link } from "react-router"
 import "./Home.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightLong, faTicket, faCalendarDay,
-         faMapLocationDot, faSquarePollHorizontal, faRoute,
-         faHandshakeAngle, faCircleQuestion, faMap
-       } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { resourceCardData } from "../../data/resourceCardData.js";
+import ResourceCard from "../../components/ResourceCard/ResourceCard";
 
 
 
@@ -34,62 +33,13 @@ const Home = () => {
           <p>Your complete resource for Rural Transit</p>
         </div>
         <div className="resource-grid">
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faTicket} />
-            </div>
-            <h3>Booking</h3>
-            <p>Bus Ticket Online via third party booking sites</p>
-          </div>
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faCalendarDay} />
-            </div>
-            <h3>Schedules</h3>
-            <p>View complete departure time, arrival time and duration in each available bus routes</p>
-          </div>
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faMapLocationDot} />
-            </div>
-            <h3>Terminals</h3>
-            <p>Find your local nearby terminal, address, and contact information</p>
-          </div>
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faSquarePollHorizontal} />
-            </div>
-            <h3>Rates</h3>
-            <p>Check current fares and pricing for different bus types</p>
-          </div>
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faRoute} />
-            </div>
-            <h3>Routes</h3>
-            <p>Explore and browse all available bus routes</p>
-          </div>
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faHandshakeAngle} />
-            </div>
-            <h3>Third Party Buses</h3>
-            <p>Guide to other buses that is affilated with Rural Transit and from Mindanao</p>
-          </div>
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faCircleQuestion} />
-            </div>
-            <h3>FAQ</h3>
-            <p>Answers in common questions about Rural Transit services</p>
-          </div>
-          <div className="resource-grid-card">
-            <div className="card-icon-container">
-              <FontAwesomeIcon className="resource-card-icon" icon={faMap} />
-            </div>
-            <h3>Travel Guide</h3>
-            <p>Tips and guide for better and smooth travel experience</p>
-          </div>
+          {resourceCardData.map((card) => (
+            <ResourceCard
+              icon={card.icon}
+              name={card.name}
+              description={card.description}
+            />
+          ))}
         </div>
       </div>
       <div className="popular-routes-section"></div>
