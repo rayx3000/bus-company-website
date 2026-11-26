@@ -1,10 +1,10 @@
 import { Link } from "react-router"
 import "./Home.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong , faBusSide} from "@fortawesome/free-solid-svg-icons";
 import { resourceCardData } from "../../data/resourceCardData.js";
 import ResourceCard from "../../components/ResourceCard/ResourceCard";
-
+import PopularRouteCard from "../../components/PopularRouteCard/PopularRouteCard.js";
 
 
 const Home = () => {
@@ -42,7 +42,26 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="popular-routes-section"></div>
+      <div className="popular-routes-section">
+        <div className="popular-routes-header">
+          <div className="popular-routes-header-left">
+            <FontAwesomeIcon className="bus-icon" icon={faBusSide} />
+            <div className="popular-routes-caption">
+              <h1>Popular Routes</h1>
+              <p>Explore the most traveled routes from Rural Transit and its affilated</p>
+            </div>
+          </div>
+          <div className="popular-routes-header-right">
+            <button className="view-all-routes-btn">
+              <span>View All Routes</span>
+              <FontAwesomeIcon icon={faArrowRightLong} />
+            </button>
+          </div>
+        </div>
+        <div className="popular-routes-grid">
+          <PopularRouteCard />
+        </div>
+      </div>
     </div>
   )
 }
